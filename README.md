@@ -3,7 +3,7 @@
 
 envdistribution.sh
 
-Bash script that extracts sample-level metadata for a given list of ASVs from EukBank v1. For each ASV, it identifies the samples in which it occurs and retrieves associated data — read counts, environment, and geographic coordinates, and calculates relative abundance within the sample. The resulting tables can be used downstream, e.g. to generate biogeographic maps in R.
+Bash script that summarizes the distribution of a group of ASVs from EukBank v1 across samples and environments. For each input list, it sums the reads of all ASVs in the group per sample and retrieves associated data (total sample reads, environment, and geographic coordinates) to calculate the group's relative abundance in each sample. It also generates a table of reads per ASV and environment. The resulting tables can be used downstream, e.g. to generate biogeographic maps in R, or as metadata on a phylogenetic tree to explore environmental patterns within the group.
 
 
 
