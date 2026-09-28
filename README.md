@@ -1,4 +1,4 @@
-# New-holozoa-diversity
+# Exploring Unicellular Holozoa Diversity
 
 
 envdistribution.sh
