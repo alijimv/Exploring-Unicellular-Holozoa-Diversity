@@ -11,13 +11,16 @@ set -euo pipefail
 ###################################################
 ###################################################
 
-## Extracts sample-level metadata for a given list of ASVs from EukBank.
+## Summarizes the distribution of a group of ASVs from EukBank across
+## samples and environments.
 #
-# For each ASV, the script identifies the samples in which it occurs
-# and retrieves associated data, including read counts, environment,
-# and geographic coordinates. The resulting tables can be used
-# downstream, e.g. to generate biogeographic maps in R, or as metadata
-# on a phylogenetic tree to explore environmental patterns within a group.
+# For each input list, the script sums the reads of all ASVs in the group
+# per sample and retrieves associated data, including total sample reads,
+# environment, and geographic coordinates, to calculate the group's
+# relative abundance in each sample. It also generates a table of reads
+# per ASV and environment. The resulting tables can be used downstream,
+# e.g. to generate biogeographic maps in R, or as metadata on a
+# phylogenetic tree to explore environmental patterns within a group.
 
 # Note: designed for EukBank v1. Column indices (e.g. environment
 # in $SAMPLES) assume the v1 file structure and may need updating
