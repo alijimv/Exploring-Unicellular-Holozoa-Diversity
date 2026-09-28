@@ -15,8 +15,9 @@ set -euo pipefail
 #
 # For each ASV, the script identifies the samples in which it occurs
 # and retrieves associated data, including read counts, environment,
-# and geographic coordinates. The resulting table can be used
-# downstream, e.g. to generate biogeographic maps in R.
+# and geographic coordinates. The resulting tables can be used
+# downstream, e.g. to generate biogeographic maps in R, or as metadata
+# on a phylogenetic tree to explore environmental patterns within a group.
 
 # Note: designed for EukBank v1. Column indices (e.g. environment
 # in $SAMPLES) assume the v1 file structure and may need updating
@@ -30,9 +31,19 @@ set -euo pipefail
 #   output_folder   Directory where results will be written
 
 ## Output:
-#   One TSV file per input group, named:
-#     <basename>_reads_per_sample_nreads_env_lat_long_relativeabundance.tsv
-#   Columns: sample, reads, nreads, environment, lat, lon, relative_abundance
+#   <basename>_ASV_env_WIDE.csv
+#   Columns: ASV, <one column per environment>
+#   Reads per ASV and environment.
+#
+#   <basename>_reads_per_sample_nreads_env_lat_long_relativeabundance.tsv
+#   Columns: sample, reads, nreads, environment, latitute, longitude, relative_abundance
+#
+#   Files are written to <output_folder>/<basename>/, one set per input group.
+#
+#   Intermediate files are also written:
+#     <output_folder>/<basename>/<basename>_counts_env.tsv
+#     <output_folder>/<basename>/<basename>_ASV_env_long.tsv
+#     <output_folder>/envplot.list
 
 ## Example:
 #   ./envdistribution.sh *.list EukBank/Biogeography
