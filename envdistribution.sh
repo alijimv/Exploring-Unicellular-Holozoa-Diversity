@@ -39,7 +39,7 @@ set -euo pipefail
 #   Reads per ASV and environment.
 #
 #   <basename>_reads_per_sample_nreads_env_lat_long_relativeabundance.tsv
-#   Columns: sample, reads, nreads, environment, latitute, longitude, relative_abundance
+#   Columns: sample, reads, nreads, environment, latitude, longitude, relative_abundance
 #
 #   Files are written to <output_folder>/<basename>/, one set per input group.
 #
