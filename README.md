@@ -1,6 +1,6 @@
 # Exploring Unicellular Holozoa Diversity
 
-## eukbank_expand_clusters.R
+### eukbank_expand_clusters.R
 
 Rscript that expands a list of selected EukBank v1 ASVs to their full set of member amplicons, using EukBank's hierarchical single-linkage clustering by pairwise distance.
 
