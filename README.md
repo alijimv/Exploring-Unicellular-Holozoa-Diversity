@@ -1,5 +1,8 @@
 # Exploring Unicellular Holozoa Diversity
 
+These include scripts to summarize the distribution of ASV groups across samples and environments and to plot their geographic distribution as world maps, as well as scripts to compute the read abundance of described unicellular Holozoa lineages and ASVs affiliated to uncharacterized lineages across environments and to visualize it as bar charts. Additionally, it includes a script to expand a list of selected ASVs to their full set of member amplicons, based on EukBank's hierarchical ASV clustering.
+
+
 ### eukbank_expand_clusters.R
 
 Rscript that expands a list of selected EukBank v1 ASVs to their full set of member amplicons, using EukBank's hierarchical single-linkage clustering by pairwise distance.
